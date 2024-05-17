@@ -22,13 +22,12 @@ STEP:6  Click the simulation to simulate the program and  give the inputs and ve
 
 STEP:7  Select the Implementation in the Sources Window and select the required file in the Processes Window.
 
-STEP:8  Select Check Syntax from the Synthesize  XST Process. Double Click in the  FloorplanArea/IO/Logic-Post Synthesis 
-        process in the User Constraints process group. UCF(User constraint File) is obtained. 
+STEP:8  Select Check Syntax from the Synthesize  XST Process. Double Click in the  FloorplanArea/IO/Logic-Post Synthesis process in the User Constraints process group. UCF(User 
+        constraint File) is obtained. 
         
 STEP:9  In the Design Object List Window, enter the pin location for each pin in the Loc column Select save from the File menu.
 
-STEP:10 Double click on the Implement Design and double click on the Generate Programming File to create a bitstream of the design.
-        (.v) file is converted into .bit file here.
+STEP:10 Double click on the Implement Design and double click on the Generate Programming File to create a bitstream of the design. (.v) file is converted into .bit file here.
 
 STEP:11 On the board, by giving required input, the LEDs starts to glow light, indicating the output.
 
