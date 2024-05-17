@@ -1,22 +1,58 @@
-SIMULATION AND IMPLEMENTATION OF  COMBINATIONAL LOGIC CIRCUITS
+## VLSI-LAB-EXP-2
+# SIMULATION AND IMPLEMENTATION OF  COMBINATIONAL LOGIC CIRCUITS
 
-AIM: 
- To simulate and synthesis ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR using Xilinx ISE.
+## AIM: 
+        To simulate and synthesis ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR using Xilinx ISE.
 
-APPARATUS REQUIRED:
-Xilinx 14.7
-Spartan6 FPGA
+## APPARATUS REQUIRED:
+                       Xilinx 14.7 Spartan6 FPGA
 
-**LOGIC DIAGRAM**
+## ENCODER:
 
-ENCODER
-
+## LOGIC DIAGRAM:
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/3cd1f95e-7531-4cad-9154-fdd397ac439e)
 
+## PROGRAM:
+```
+module enc8to3(e0,e1,e2,e3,e4,e5,e6,e7,d0,d1,d2);
+input e0,e1,e2,e3,e4,e5,e6,e7;
+output d0,d1,d2;
+or g1(d0,e1,e3,e5,e7);
+or g2(d1,e2,e3,e6,e7);
+or g3(d2,e4,e5,e6,e7);
+endmodule
+```
+## OUTPUT:
+![Screenshot 2024-05-17 170126](https://github.com/reshmasundar18/VLSI-LAB-EXP-2/assets/166894571/37f38d67-d170-44af-92f7-7adf0c152367)
 
-DECODER
+## DECODER:
 
+## LOGIC DIAGRAM:
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/45a5e6cf-bbe0-4fd5-ac84-e5ad4477483b)
+
+## PROGRAM:
+```
+module dec3to8(in_data,out_select);
+input [7:0] in_data;
+output reg [2:0] out_select;
+always @* begin
+  case (in_data)
+    8'b00000001: out_select = 3'b000; 
+    8'b00000010: out_select = 3'b001; 
+    8'b00000100: out_select = 3'b010; 
+    8'b00001000: out_select = 3'b011; 
+    8'b00010000: out_select = 3'b100; 
+    8'b00100000: out_select = 3'b101; 
+    8'b01000000: out_select = 3'b110; 
+    8'b10000000: out_select = 3'b111; 
+    default: out_select = 3'b000; 
+  endcase
+end
+endmodule
+```
+## OUTPUT:
+![image](https://github.com/reshmasundar18/VLSI-LAB-EXP-2/assets/166894571/affbd56a-e062-4f5d-a916-e916274cffae)
+
 
 
 MULTIPLEXER
